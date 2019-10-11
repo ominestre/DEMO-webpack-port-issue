@@ -1,0 +1,19 @@
+{
+  "name": "lab-webpack-port",
+  "version": "1.0.0",
+  "description": "A lab to demonstrate an issue found with port bindings in the webpack dev server",
+  "main": "blocking-server.js",
+  "scripts": {
+    "build": "mkdir -p dist & cp src/index.html dist/index.html",
+    "postbuild": "webpack-dev-server --open",
+    "start": "node blocking-server.js & npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ominestre",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.41.1",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
+  }
+}
